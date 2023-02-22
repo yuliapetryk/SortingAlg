@@ -2,4 +2,9 @@
 x64/
 *.sln
 .vs/Lab1/
-
+/cmake-build-debug/
+*.txt
+.idea/
+*.filters
+*.user
+Lab1/x64/
