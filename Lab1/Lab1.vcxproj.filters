@@ -13,31 +13,19 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="UI">
-      <UniqueIdentifier>{03b7c0a9-fc9f-4763-80e7-4a4950913e62}</UniqueIdentifier>
-    </Filter>
     <Filter Include="sorts">
       <UniqueIdentifier>{af788894-03b3-4724-8170-7d8d8ec023d2}</UniqueIdentifier>
     </Filter>
     <Filter Include="lists">
       <UniqueIdentifier>{29cc9214-4247-48e7-9049-0d4931e4c1b1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="comparators">
-      <UniqueIdentifier>{e3a60297-d604-425a-b453-2140568326ff}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lab1_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TerminalUI.cpp">
-      <Filter>UI</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TerminalUI.h">
-      <Filter>UI</Filter>
-    </ClInclude>
     <ClInclude Include="BubbleSort.h">
       <Filter>sorts</Filter>
     </ClInclude>
@@ -59,20 +47,8 @@
     <ClInclude Include="LinkedList.h">
       <Filter>lists</Filter>
     </ClInclude>
-    <ClInclude Include="VectorList.h">
-      <Filter>lists</Filter>
-    </ClInclude>
     <ClInclude Include="QuickSort.h">
       <Filter>sorts</Filter>
-    </ClInclude>
-    <ClInclude Include="ReverseComparator.h">
-      <Filter>comparators</Filter>
-    </ClInclude>
-    <ClInclude Include="Comparator.h">
-      <Filter>comparators</Filter>
-    </ClInclude>
-    <ClInclude Include="DefaultComparator.h">
-      <Filter>comparators</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

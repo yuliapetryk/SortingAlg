@@ -1,9 +1,7 @@
-
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
 #include "..\Lab1\List.h"
-
 
 template<class T>
 class LinkedList : public List<T> {
@@ -11,8 +9,8 @@ private:
     
     class Node {
     public:
-        T obj;                  ///< Object which we add, remove, find...
-        Node* next = nullptr;   ///< Pointer on next Node.
+        T obj;                 
+        Node* next = nullptr;  
 
         Node(T& obj) {
             this->obj = obj;
@@ -20,9 +18,9 @@ private:
 
     };
 
-    int size = 0;               ///< Value for saving count of elements.
-    Node* head = nullptr;       ///< Pointer on first Node in LinkedList.
-    Node* tail = nullptr;       ///< Pointer on last Node in LinkedList
+    int size = 0;               
+    Node* head = nullptr;      
+    Node* tail = nullptr;       
 
 public:
     
@@ -145,7 +143,7 @@ public:
         size = 0;
     }
 
-    void sort(Comparator<T>* comparator = nullptr) override {
+    void sort(Sort<T>* sort) override {
         T* arr = new T[size];
 
         tail = head;
@@ -154,43 +152,8 @@ public:
             tail = tail->next;
         }
 
-        QuickSort<T> quickSort;
-
-        if (comparator) {
-            quickSort.sort(arr, size, comparator);
-        }
-        else {
-            DefaultComparator<T> defaultComparator;
-            quickSort.sort(arr, size, &defaultComparator);
-        }
-
-        tail = head;
-        for (int i = 0; i < size; i++) {
-            tail->obj = arr[i];
-            tail = tail->next;
-        }
-
-        delete[] arr;
-    }
-
-   
-    void sort(Sort<T>* sort, Comparator<T>* comparator = nullptr) override {
-        T* arr = new T[size];
-
-        tail = head;
-        for (int i = 0; i < size; i++) {
-            arr[i] = tail->obj;
-            tail = tail->next;
-        }
-
-        if (comparator) {
-            sort->sort(arr, size, comparator);
-        }
-        else {
-            DefaultComparator<T> defaultComparator;
-            sort->sort(arr, size, &defaultComparator);
-        }
-
+        sort->sort(arr, size);
+        
         tail = head;
         for (int i = 0; i < size; i++) {
             tail->obj = arr[i];

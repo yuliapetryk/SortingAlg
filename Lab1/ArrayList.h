@@ -1,19 +1,16 @@
-
 #ifndef ARRAYLIST_H
 #define ARRAYLIST_H
 
 #include <iostream>
 #include "..\Lab1\List.h"
 
-
 template<class T>
 class ArrayList : public List<T> {
 private:
-    int size = 0;            ///< Value for saving count of elements in ArrayList.
-    int arr_size = 2;        ///< Value for saving size of array in ArrayList.
-    T* arr = new T[16];      ///< Array with elements.
+    int size = 0;           
+    int arr_size = 2;        
+    T* arr = new T[16];      
 
-    
     void change_arr_size(int new_size) {
         while (new_size <= size) new_size *= 2;
 
@@ -31,7 +28,7 @@ public:
         delete[] arr;
     }
 
-    
+   
     void add(T obj, int index = -1) override {
         if (index < 0)
             index = size;
@@ -96,55 +93,18 @@ public:
     }
 
     
-    void sort(Comparator<T>* comparator = nullptr) override {
-        QuickSort<T> quickSort;
-
-        if (comparator) {
-            quickSort.sort(arr, size, comparator);
-        }
-        else {
-            DefaultComparator<T> defaultComparator;
-            quickSort.sort(arr, size, &defaultComparator);
-        }
-    }
-
-   
-    void sort(Sort<T>* sort, Comparator<T>* comparator = nullptr) override {
-        if (comparator) {
-            sort->sort(arr, size, comparator);
-        }
-        else {
-            DefaultComparator<T> defaultComparator;
-            sort->sort(arr, size, &defaultComparator);
-        }
+    void sort(Sort<T>* sort) override {
+      sort->sort(arr, size);
+        
     }
 
     
-    static void sort(T* global_arr, int global_size, Sort<T>* sort = nullptr, Comparator<T>* comparator = nullptr) {
-        if (sort) {
-            if (comparator) {
-                sort->sort(global_arr, global_size, comparator);
-            }
-            else {
-                DefaultComparator<T> defaultComparator;
-                sort->sort(global_arr, global_size, &defaultComparator);
-            }
-        }
-        else {
-            QuickSort<T> quickSort;
-
-            if (comparator) {
-                quickSort.sort(global_arr, global_size, comparator);
-            }
-            else {
-                DefaultComparator<T> defaultComparator;
-                quickSort.sort(global_arr, global_size, &defaultComparator);
-            }
-        }
-
+    static void sort(T* global_arr, int global_size, Sort<T>* sort = nullptr)  {
+     QuickSort<T> quickSort;
+    quickSort.sort(global_arr, global_size);
+     
     }
 
-    
     int get_size() override {
         return size;
     }

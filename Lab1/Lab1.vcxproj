@@ -144,22 +144,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="lab1_main.cpp" />
-    <ClCompile Include="TerminalUI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayList.h" />
     <ClInclude Include="BubbleSort.h" />
-    <ClInclude Include="Comparator.h" />
-    <ClInclude Include="DefaultComparator.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="MergeSort.h" />
     <ClInclude Include="QuickSort.h" />
-    <ClInclude Include="ReverseComparator.h" />
     <ClInclude Include="Sort.h" />
-    <ClInclude Include="TerminalUI.h" />
-    <ClInclude Include="VectorList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

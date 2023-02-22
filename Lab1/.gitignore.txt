@@ -1,0 +1,14 @@
+*.vcxproj
+x64/Release/
+x64/Release/Lab1.iobj
+x64/Release/Lab1.ipdb
+x64/Release/Lab1.log
+x64/Release/Lab1.tlog/CL.command.1.tlog
+x64/Release/Lab1.tlog/CL.read.1.tlog
+x64/Release/Lab1.tlog/CL.write.1.tlog
+x64/Release/Lab1.tlog/link.command.1.tlog
+x64/Release/Lab1.tlog/link.read.1.tlog
+x64/Release/Lab1.tlog/link.write.1.tlog
+x64/Release/TerminalUI.obj
+x64/Release/lab1_main.obj
+x64/Release/vc143.pdb

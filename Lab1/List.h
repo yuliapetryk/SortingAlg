@@ -1,13 +1,9 @@
-
 #ifndef LIST_H
 #define LIST_H
 
 #include "sstream"
 #include "..\Lab1\Sort.h"
 #include "..\Lab1\QuickSort.h"
-
-
-
 
 template<class T>
 class List {
@@ -27,11 +23,8 @@ public:
  
     virtual void clear() = 0;
 
-   
-    virtual void sort(Comparator<T>* comparator = nullptr) = 0;
-
     
-    virtual void sort(Sort<T>* sort, Comparator<T>* comparator = nullptr) = 0;
+    virtual void sort(Sort<T>* sort) = 0 ;
 
     
     virtual int get_size() = 0;
