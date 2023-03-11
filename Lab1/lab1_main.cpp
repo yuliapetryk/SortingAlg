@@ -24,14 +24,14 @@ void random_int(int count, List<int>* list) {
 
 void random_string(int count, List<string>* list) {
     string res;
+    const string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
     for (int i = 0; i < count; i++) {
         srand(time(nullptr) + i);
         res = "";
-        for (int i = 0; i < rand() % 100; i++) {
-            res += (char)(rand() % 127 - 33) + 33;
+        for (int j = 0; j < 10; j++) { 
+            res += alphabet[rand() % alphabet.length()];
         }
-
         list->add(res);
     }
 }
