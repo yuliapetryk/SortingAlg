@@ -13,39 +13,39 @@ private:
         *a = *b;
         *b = t;
     }
-    int partition(T* arr, int low, int high)
+    int partition(T* array, int low, int high)
     {
-       T pivot = arr[high];
+       T pivot = array[high];
         int i
             = (low
                 - 1); 
 
         for (int j = low; j <= high - 1; j++) {
      
-            if (arr[j] < pivot) {
+            if (array[j] < pivot) {
                 i++; 
-                swap(&arr[i], &arr[j]);
+                swap(&array[i], &array[j]);
             }
         }
-        swap(&arr[i + 1], &arr[high]);
+        swap(&array[i + 1], &array[high]);
         return (i + 1);
     }
 
  
-    void quickS(T* arr, int const low, int const high)
+    void quickSort(T* array, int const low, int const high)
     {
         if (low < high) {
-            int pi = partition(arr, low, high);
-            quickS(arr, low, pi - 1);
-            quickS(arr, pi + 1, high);
+            int pi = partition(array, low, high);
+            quickSort(array, low, pi - 1);
+            quickSort(array, pi + 1, high);
         }
     }
 
 
 public:
    
-    void sort(T* arr, int size) override {
-       quickS(arr, 0,size - 1);
+    void sort(T* array, int size) override {
+       quickSort(array, 0,size - 1);
     }
 };
 

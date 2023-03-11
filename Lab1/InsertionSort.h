@@ -8,22 +8,22 @@ template<class T>
 class InsertionSort : public Sort<T> {
 public:
     
-   void sort(T* arr, int n) override
+   void sort(T* array, int size) override
     {
        T key;
         int i, j;
-        for (i = 1; i < n; i++)
+        for (i = 1; i < size; i++)
         {
-            key = arr[i];
+            key = array[i];
             j = i - 1;
 
  
-            while (j >= 0 && arr[j] > key)
+            while (j >= 0 && array[j] > key)
             {
-                arr[j + 1] = arr[j];
+                array[j + 1] = array[j];
                 j = j - 1;
             }
-            arr[j + 1] = key;
+            array[j + 1] = key;
         }
     }
   

@@ -5,21 +5,24 @@
 
 template<class T>
 class BubbleSort : public Sort<T> {
+private:
+    int compare(T& a, T& b) {
+        if (a == b) return 0;
+        else return a > b;
+    }
 public:
-    void sort(T* array , int size) {
+    void sort(T* array, int size) {
 
-        for (int step = 0; step < (size - 1); ++step) {
-            int swapped = 0;           
-            for (int i = 0; i < (size - step - 1); ++i) {               
-                if (array[i] > array[i + 1]) {                    
-                    T temp = array[i];
-                    array[i] = array[i + 1];
-                    array[i + 1] = temp;
-                    swapped = 1;
+        T temp;
+
+        for (int i = 1; i < size; i++) {
+            for (int j = 0; j < size - i; j++) {
+                if (compare(array[j], array[j + 1]) == 1) {
+                    temp = array[j + 1];
+                    array[j + 1] = array[j];
+                    array[j] = temp;
                 }
             }
-            if (swapped == 0)
-                break;
         }
     }
 };

@@ -45,8 +45,8 @@ void work_with_string_list() {
 
     int list_type;
     cout <<"Choose type of List\n"
-        "[1] ArrayList\n"
-        "[2] LinkedList" << endl;
+        "[1] Array List\n"
+        "[2] Linked List" << endl;
     scanf("%d", &list_type);
 
     switch (list_type) {
@@ -186,8 +186,8 @@ void  work_with_int_list() {
    
     int list_type;
     cout << "Choose type of List\n"
-        "[1] ArrayList\n"
-        "[2] LinkedList" << endl;
+        "[1] Array List\n"
+        "[2] Linked List" << endl;
     scanf("%d", &list_type);
 
     switch (list_type) {

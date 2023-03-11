@@ -1,31 +1,31 @@
 #ifndef ARRAYLIST_H
 #define ARRAYLIST_H
 
-#include <iostream>
+
 #include "..\Lab1\List.h"
 
 template<class T>
 class ArrayList : public List<T> {
 private:
     int size = 0;           
-    int arr_size = 2;        
-    T* arr = new T[16];      
+    int array_size = 2;        
+    T* array = new T[16];      
 
-    void change_arr_size(int new_size) {
+    void change_array_size(int new_size) {
         while (new_size <= size) new_size *= 2;
 
         T* temp = new T[new_size];
-        for (int i = 0; i < arr_size; i++) {
-            temp[i] = arr[i];
+        for (int i = 0; i < array_size; i++) {
+            temp[i] = array[i];
         }
-        delete[] arr;
-        arr = temp;
-        arr_size = new_size;
+        delete[] array;
+        array = temp;
+        array_size = new_size;
     }
 
 public:
      ~ArrayList() {
-        delete[] arr;
+        delete[] array;
     }
 
    
@@ -35,14 +35,14 @@ public:
         else if (index > size)
             throw std::out_of_range("index " + std::to_string(index) + " is greater then the size");
 
-        if (size == arr_size)
-            change_arr_size(arr_size / 2 * 3 + 2);
+        if (size == array_size)
+            change_array_size(array_size / 2 * 3 + 2);
 
         T temp1 = obj;
         T temp2;
         while (index <= size) {
-            temp2 = arr[index];
-            arr[index] = temp1;
+            temp2 = array[index];
+            array[index] = temp1;
             std::swap(temp1, temp2);
             index++;
         }
@@ -57,7 +57,7 @@ public:
             index = size - 1;
 
         for (int i = index; i < size - 1; i++) {
-            arr[i] = arr[i + 1];
+            array[i] = array[i + 1];
         }
         size--;
     }
@@ -69,14 +69,14 @@ public:
         else if (index < 0)
             index = size - 1;
 
-        return arr[index];
+        return array[index];
     }
 
    
     int find(T obj) override {
         int res = -1;
         for (int i = 0; i < size; i++) {
-            if (arr[i] == obj) {
+            if (array[i] == obj) {
                 res = i;
                 break;
             }
@@ -86,22 +86,22 @@ public:
 
     
     void clear() override {
-        delete[] arr;
+        delete[] array;
         size = 0;
-        arr_size = 16;
-        arr = new T[arr_size];
+        array_size = 16;
+        array = new T[array_size];
     }
 
     
     void sort(Sort<T>* sort) override {
-      sort->sort(arr, size);
+      sort->sort(array, size);
         
     }
 
     
-    static void sort(T* global_arr, int global_size, Sort<T>* sort = nullptr)  {
+    static void sort(T* global_array, int global_size, Sort<T>* sort = nullptr)  {
      QuickSort<T> quickSort;
-    quickSort.sort(global_arr, global_size);
+    quickSort.sort(global_array, global_size);
      
     }
 
@@ -115,9 +115,9 @@ public:
         ss << '[';
         if (size != 0) {
             for (int i = 0; i < size - 1; i++) {
-                ss << arr[i] << ", ";
+                ss << array[i] << ", ";
             }
-            ss << arr[size - 1];
+            ss << array[size - 1];
         }
         ss << ']';
 

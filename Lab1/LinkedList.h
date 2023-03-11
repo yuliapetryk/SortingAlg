@@ -144,23 +144,23 @@ public:
     }
 
     void sort(Sort<T>* sort) override {
-        T* arr = new T[size];
+        T* array = new T[size];
 
         tail = head;
         for (int i = 0; i < size; i++) {
-            arr[i] = tail->obj;
+            array[i] = tail->obj;
             tail = tail->next;
         }
 
-        sort->sort(arr, size);
+        sort->sort(array, size);
         
         tail = head;
         for (int i = 0; i < size; i++) {
-            tail->obj = arr[i];
+            tail->obj = array[i];
             tail = tail->next;
         }
 
-        delete[] arr;
+        delete[] array;
     }
 
    
