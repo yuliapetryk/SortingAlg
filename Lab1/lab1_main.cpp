@@ -22,7 +22,7 @@ void random_int(int count, List<int>* list) {
 
 
 
-void random_string(int count, List<std::string>* list) {
+void random_string(int count, List<string>* list) {
     string res;
 
     for (int i = 0; i < count; i++) {
@@ -41,7 +41,7 @@ void random_string(int count, List<std::string>* list) {
 
 
 void work_with_string_list() {
-    List<std::string>* list;
+    List<string>* list;
 
     int list_type;
     cout <<"Choose type of List\n"
