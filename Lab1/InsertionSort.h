@@ -7,11 +7,11 @@
 template<class T>
 class InsertionSort : public Sort<T> {
 public:
-
     
-   void sort(int arr[], int n)
+   void sort(T* arr, int n) override
     {
-        int i, key, j;
+       T key;
+        int i, j;
         for (i = 1; i < n; i++)
         {
             key = arr[i];

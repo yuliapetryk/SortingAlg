@@ -7,16 +7,15 @@
 template<class T>
 class QuickSort : public Sort<T> {
 private:
-    void swap(int* a, int* b)
+    void swap(T* a, T* b)
     {
-        int t = *a;
+        T t = *a;
         *a = *b;
         *b = t;
     }
-
-    int partition(int arr[], int low, int high)
+    int partition(T* arr, int low, int high)
     {
-        int pivot = arr[high];
+       T pivot = arr[high];
         int i
             = (low
                 - 1); 
