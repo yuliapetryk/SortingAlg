@@ -11,7 +11,11 @@
 using namespace std;
 
 template <class T>
-string to_list_string(T* a,T* b,T* c,T* d ) {
+string to_list_string(T* a,
+    T* b = nullptr,
+    T* c = nullptr,
+    T* d = nullptr,
+    T* e = nullptr ) {
    stringstream ss;
     ss << '[' << *a;
     if (b != 0) ss << ", " << *b;
@@ -98,6 +102,39 @@ TEST_CASE("testing Sorting for Array list") {
     }
 }
 
+TEST_CASE("Operations") {
+    int a = 1, b = 2, c = 3, d = 4;
+    //create Array list
+    List<int>* array_list;
+    array_list = new ArrayList<int>;
+    array_list->add(a);
+    array_list->add(b);
+    array_list->add(c);
+    // create Linked list
+    List<int>* linked_list;
+    linked_list = new LinkedList<int>;
+
+    linked_list->add(a);
+    linked_list->add(b);
+    linked_list->add(c);
+
+    SUBCASE("Add") {
+
+        array_list->add(a);
+        CHECK(array_list->to_string() == to_list_string(&a, &b, &c, &a));
+
+        linked_list->add(b);
+        CHECK(linked_list->to_string() == to_list_string(&a, &b, &c, &b));
+    }
+    SUBCASE("Remove") {
+
+        array_list->remove(0);
+       CHECK(array_list->to_string() == to_list_string( &b, &c));
+
+        linked_list->remove(1);
+        CHECK(linked_list->to_string() == to_list_string(&a, &c));
+    }
+}
 
 
 
