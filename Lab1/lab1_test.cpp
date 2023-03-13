@@ -15,12 +15,15 @@ string to_list_string(T* a,
     T* b = nullptr,
     T* c = nullptr,
     T* d = nullptr,
-    T* e = nullptr ) {
+    T* e = nullptr ,
+    T* f = nullptr) {
    stringstream ss;
     ss << '[' << *a;
     if (b != 0) ss << ", " << *b;
     if (c != 0) ss << ", " << *c;
     if (d != 0) ss << ", " << *d;
+    if (e != 0) ss << ", " << *e;
+    if (f != 0) ss << ", " << *f;
     ss << ']';
     return ss.str();
 }
@@ -103,7 +106,7 @@ TEST_CASE("testing Sorting for Array list") {
 }
 
 TEST_CASE("Operations") {
-    int a = 1, b = 2, c = 3, d = 4;
+    int a = 6, b = 2, c = 3, d = 4;
     //create Array list
     List<int>* array_list;
     array_list = new ArrayList<int>;
@@ -121,19 +124,47 @@ TEST_CASE("Operations") {
     SUBCASE("Add") {
 
         array_list->add(a);
-        CHECK(array_list->to_string() == to_list_string(&a, &b, &c, &a));
-
+        array_list->add(d,1);
+    
+        CHECK(array_list->to_string() == to_list_string(&a,&d, &b, &c, &a));
         linked_list->add(b);
-        CHECK(linked_list->to_string() == to_list_string(&a, &b, &c, &b));
+        linked_list->add(d,0);
+        CHECK(linked_list->to_string() == to_list_string(&d,&a, &b, &c, &b));
     }
+
     SUBCASE("Remove") {
-
         array_list->remove(0);
-       CHECK(array_list->to_string() == to_list_string( &b, &c));
-
+        CHECK(array_list->to_string() == to_list_string(&b, &c));
         linked_list->remove(1);
         CHECK(linked_list->to_string() == to_list_string(&a, &c));
     }
+
+    SUBCASE("Get") {
+        CHECK_EQ(array_list->get(0), 6);
+        CHECK_EQ(linked_list->get(2), 3);
+    }
+
+    SUBCASE("Find") {
+        CHECK_EQ(array_list->find(6), 0);
+        CHECK_EQ(linked_list->find(6), 0);
+    }
+    SUBCASE("Size") {
+        CHECK_EQ(array_list->get_size(), 3);
+        CHECK_EQ(linked_list->get_size(), 3);
+    }
+    SUBCASE("Clear"){
+        array_list->clear();
+        CHECK_EQ(array_list->get_size(), 0);
+        linked_list->clear();
+        CHECK_EQ(linked_list->get_size(), 0);
+    }
+    SUBCASE("Range") {
+      
+        CHECK_THROWS_AS(array_list->get(4), out_of_range);
+        CHECK_THROWS_AS(linked_list->remove(10), out_of_range);
+    }
+
+
 }
 
 
