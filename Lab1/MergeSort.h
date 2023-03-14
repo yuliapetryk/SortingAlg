@@ -71,6 +71,8 @@ private:
 public:
    
     void sort(T* array, int size) override {
+        if ((size == 0))
+            throw std::out_of_range("Your list is empty ");
         mergeSort(array, 0, size-1);
     }
 };

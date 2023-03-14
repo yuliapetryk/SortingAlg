@@ -12,18 +12,22 @@ private:
     }
 public:
     void sort(T* array, int size) {
-
-        T temp;
-
-        for (int i = 1; i < size; i++) {
-            for (int j = 0; j < size - i; j++) {
-                if (compare(array[j], array[j + 1]) == 1) {
-                    temp = array[j + 1];
-                    array[j + 1] = array[j];
-                    array[j] = temp;
+        if ((size == 0))
+            throw std::out_of_range("Your list is empty ");
+            
+        else {
+            T temp;
+            for (int i = 1; i < size; i++) {
+                for (int j = 0; j < size - i; j++) {
+                    if (compare(array[j], array[j + 1]) == 1) {
+                        temp = array[j + 1];
+                        array[j + 1] = array[j];
+                        array[j] = temp;
+                    }
                 }
             }
         }
+        
     }
 };
 

@@ -10,6 +10,8 @@ public:
     
    void sort(T* array, int size) override
     {
+       if ((size == 0))
+           throw std::out_of_range("Your list is empty ");
        T key;
         int i, j;
         for (i = 1; i < size; i++)

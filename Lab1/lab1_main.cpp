@@ -12,7 +12,7 @@
 
 using namespace std;
 
-namespace lab {
+
     void random_int(int count, List<int>* list) {
         int res;
 
@@ -341,18 +341,19 @@ namespace lab {
             work_with_string_list();
             break;
         default:
-            work_with_int_list();
+            work_with_int_list(); 
         }
 
     }
-    int doctest() {
+  // namespace lab {
+   /*int doctest() {
         doctest::Context context;
         return context.run();
-    }
+    }*/
     int main() {
-
+        //doctest();
         start();
         return 0;
 
     }
-}
+//}
