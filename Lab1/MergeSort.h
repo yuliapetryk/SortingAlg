@@ -2,74 +2,97 @@
 #define MERGESORT_H
 
 #include "..\Lab1\Sort.h"
-#include <iostream>
-using namespace std;
+
 template<class T>
+///Class implements sorting by Merge sort.
 class MergeSort : public Sort<T> {
 private:
 
+    ///Copy data to temp arrays
+    /// @param Part The temp array
+    /// @param array Array we want to sort
+    /// @param size Size of main array
+    /// @param position The position of the element in the main array from which we start copying   
+     void split_array(T* Part, T* array, int size, int position)  {
+        for (int i = 0; i < size; i++)
+            Part[i] = array[position + i];
+    }
+
+    /// This function  compares two objects of type T. 
+    /// @returns If the objects are equal, the function returns 0, and if the first object is greater than the second, it returns 1, otherwise -1.
     int compare(T& a, T& b) {
         if (a == b) return 0;
         else return a > b;
     }
-    void merge(T* array, int l, int m, int r) {
-        int i, j, k;
-        int n1 = m - l + 1;
-        int n2 = r - m;
 
-       
-        T* L = new T[n1];
-       T* R = new T[n2];
+    /// Copy the remaining elements, if there are any
+    /// @param Part The temp array
+    /// @param array Array we want to sort
+    /// @param size Size of main array
+    /// @param index_array The position of the element in the main array  
+    /// @param index_subarray The position of the element in the subarray
+    void complete(int index_array, int size, T* Part, int index_subarray, T* array) {
+        while (index_subarray < size) {
+            array[index_array] = Part[index_subarray];
+            index_subarray++;
+            index_array++;
+        }
+    }
+
+    ///An auxiliary function that combines parts of the array A from the l  to the m element and from the m+1th to the r element into one ordered subarray
+    /// @param array Array we want to sort
+    /// @param left  The position of the leftmost element of the array
+    /// @param right The position of the rightmost element of the array
+    /// @param mid The position of the middle element of the array
+    void merge(T* array, int left, int mid, int right) {
+        int  k;
+        int left_size = mid - left + 1;
+        int right_size = right - mid;
+        T* LeftPart = new T[left_size];
+       T* RightPart = new T[right_size];
         
+       split_array(LeftPart, array, left_size, left);
+       split_array(RightPart, array, right_size,mid+1);
+     
+        int i = 0;
+        int j = 0;
+        k = left;
 
-        for (i = 0; i < n1; i++)
-            L[i] = array[l + i];
-        for (j = 0; j < n2; j++)
-            R[j] = array[m + 1 + j];
-
-        i = 0;
-        j = 0;
-        k = l;
-
-        while (i < n1 && j < n2) {
-            if (compare(L[i], R[j]) <= 0) {
-                array[k] = L[i];
+        while (i < left_size && j < right_size) {
+            if (compare(LeftPart[i], RightPart[j]) <= 0) {
+                array[k] = LeftPart[i];
                 i++;
             }
             else {
-                array[k] = R[j];
+                array[k] = RightPart[j];
                 j++;
             }
             k++;
         }
 
+        complete(k, left_size, LeftPart, i, array);
+        complete(k, right_size, RightPart,j, array);
 
-        while (i < n1) {
-            array[k] = L[i];
-            i++;
-            k++;
-        }
-
-        while (j < n2) {
-            array[k] = R[j];
-            j++;
-            k++;
-        }
+        
     }
-
-    void mergeSort(T* array, int l, int r) {
-        if (l < r) {
-            int m = l + (r - l) / 2;
-
-            mergeSort(array, l, m);
-            mergeSort(array, m + 1, r);
-
-            merge(array, l, m, r);
+    ///The function performs a partial sort, ordering its elements from left to right
+    /// @param array Array we want to sort
+    /// @param left  The position of the leftmost element of the array
+    /// @param right The position of the rightmost element of the array
+    void mergeSort(T* array, int left, int right) {
+        if (left < right) {
+            int mid = left + (right - left) / 2;
+            mergeSort(array, left, mid);
+            mergeSort(array, mid + 1, right);
+            merge(array, left, mid, right);
         }
     }
     
 public:
-   
+    /// Method for sorting arrays by Merge sort
+      /// @param array is array we want to sort
+      /// @param size is the size ot this array
+      /// @warning The function will not work if the list is empty
     void sort(T* array, int size) override {
         if ((size == 0))
             throw std::out_of_range("Your list is empty ");
