@@ -1,23 +1,21 @@
-#define DOCTEST_CONFIG_IMPLEMENT
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-#include "Sort.h"
 #include "BubbleSort.h"
 #include "MergeSort.h"
 #include "InsertionSort.h"
 #include"QuickSort.h"
-#include "List.h"
 #include "ArrayList.h"
 #include "LinkedList.h"
-using namespace std;
+
 
 template <class T>
-string to_list_string(T* a,
+std::string to_list_string(T* a,
     T* b = nullptr,
     T* c = nullptr,
     T* d = nullptr,
     T* e = nullptr ,
     T* f = nullptr) {
-   stringstream ss;
+    std::stringstream ss;
     ss << '[' << *a;
     if (b != 0) ss << ", " << *b;
     if (c != 0) ss << ", " << *c;
@@ -89,8 +87,8 @@ TEST_CASE("Tests for int") {
         }
        
         SUBCASE("Range") {
-            CHECK_THROWS_AS(array_list->get(5), out_of_range);
-            CHECK_THROWS_AS(linked_list->remove(10), out_of_range);
+            CHECK_THROWS_AS(array_list->get(5), std::out_of_range);
+            CHECK_THROWS_AS(linked_list->remove(10), std::out_of_range);
         }
 
 
@@ -107,10 +105,10 @@ TEST_CASE("Tests for int") {
                 CHECK(array_list->to_string() == to_list_string(&a, &b, &c, &d));
             }
             array_list->clear();
-            CHECK_THROWS_AS(array_list->sort(sort_bubble), out_of_range);
+            CHECK_THROWS_AS(array_list->sort(sort_bubble), std::out_of_range);
 
             linked_list->clear();
-            CHECK_THROWS_AS(linked_list->sort(sort_bubble), out_of_range);
+            CHECK_THROWS_AS(linked_list->sort(sort_bubble), std::out_of_range);
         }
 
         //testing Merge Sort
@@ -126,10 +124,10 @@ TEST_CASE("Tests for int") {
                 CHECK(array_list->to_string() == to_list_string(&a, &b, &c, &d));
             }
             array_list->clear();
-            CHECK_THROWS_AS(array_list->sort(sort_merge), out_of_range);
+            CHECK_THROWS_AS(array_list->sort(sort_merge), std::out_of_range);
 
             linked_list->clear();
-            CHECK_THROWS_AS(linked_list->sort(sort_merge), out_of_range);
+            CHECK_THROWS_AS(linked_list->sort(sort_merge), std::out_of_range);
         }
 
         //testing Quick Sort
@@ -145,10 +143,10 @@ TEST_CASE("Tests for int") {
                 CHECK(array_list->to_string() == to_list_string(&a, &b, &c, &d));
             }
             array_list->clear();
-            CHECK_THROWS_AS(array_list->sort(sort_quick), out_of_range);
+            CHECK_THROWS_AS(array_list->sort(sort_quick), std::out_of_range);
 
             linked_list->clear();
-            CHECK_THROWS_AS(linked_list->sort(sort_quick), out_of_range);
+            CHECK_THROWS_AS(linked_list->sort(sort_quick), std::out_of_range);
         }
 
         //testing Insertion Sort
@@ -164,22 +162,22 @@ TEST_CASE("Tests for int") {
                 CHECK(array_list->to_string() == to_list_string(&a, &b, &c, &d));
             }
             array_list->clear();
-            CHECK_THROWS_AS(array_list->sort(sort_insertion), out_of_range);
+            CHECK_THROWS_AS(array_list->sort(sort_insertion), std::out_of_range);
 
             linked_list->clear();
-            CHECK_THROWS_AS(linked_list->sort(sort_insertion), out_of_range);
+            CHECK_THROWS_AS(linked_list->sort(sort_insertion), std::out_of_range);
         }   
     }
 
     TEST_CASE("Tests for string") {
-        string a="apple", b ="banana", c = "cocktail", d = "dish";
+        std::string a="apple", b ="banana", c = "cocktail", d = "dish";
         //create Array list
-        List<string>* array_list;
-        array_list = new ArrayList<string>;
+        List<std::string>* array_list;
+        array_list = new ArrayList<std::string>;
 
         // create Linked list
-        List<string>* linked_list;
-        linked_list = new LinkedList<string>;
+        List<std::string>* linked_list;
+        linked_list = new LinkedList<std::string>;
 
         SUBCASE("Add") {
             array_list->add(a);
@@ -206,8 +204,8 @@ TEST_CASE("Tests for int") {
 
         //testing Bubble sort
         SUBCASE("Testing Bubble Sort") {
-            Sort<string>* sort_bubble;
-            sort_bubble = new BubbleSort<string>;
+            Sort<std::string>* sort_bubble;
+            sort_bubble = new BubbleSort<std::string>;
             linked_list->sort(sort_bubble);
             array_list->sort(sort_bubble);
             for (int i = 0; i < 3; i++) {
@@ -220,8 +218,8 @@ TEST_CASE("Tests for int") {
         
         //testing Merge Sort
         SUBCASE("Testing Merge Sort") {
-            Sort<string>* sort_merge;
-            sort_merge = new MergeSort<string>;
+            Sort<std::string>* sort_merge;
+            sort_merge = new MergeSort<std::string>;
             linked_list->sort(sort_merge);
             array_list->sort(sort_merge);
             for (int i = 0; i < 3; i++) {
@@ -234,8 +232,8 @@ TEST_CASE("Tests for int") {
         
         //testing Quick Sort
         SUBCASE("Testing Quick Sort") {
-            Sort<string>* sort_quick;
-            sort_quick = new QuickSort<string>;
+            Sort<std::string>* sort_quick;
+            sort_quick = new QuickSort<std::string>;
             linked_list->sort(sort_quick);
             array_list->sort(sort_quick);
             for (int i = 0; i < 3; i++) {
@@ -248,8 +246,8 @@ TEST_CASE("Tests for int") {
 
         //testing Insertion Sort
         SUBCASE("Testing Insertion Sort") {
-            Sort<string>* sort_insertion;
-            sort_insertion = new InsertionSort<string>;
+            Sort<std::string>* sort_insertion;
+            sort_insertion = new InsertionSort<std::string>;
             linked_list->sort(sort_insertion);
             array_list->sort(sort_insertion);
             for (int i = 0; i < 3; i++) {
@@ -287,8 +285,8 @@ TEST_CASE("Tests for int") {
             CHECK_EQ(linked_list->get_size(), 0);
         }
         SUBCASE("Range") {
-            CHECK_THROWS_AS(array_list->get(5), out_of_range);
-            CHECK_THROWS_AS(linked_list->remove(10), out_of_range);
+            CHECK_THROWS_AS(array_list->get(5), std::out_of_range);
+            CHECK_THROWS_AS(linked_list->remove(10), std::out_of_range);
         }
         
 

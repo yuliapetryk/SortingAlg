@@ -5,23 +5,29 @@
 #include "..\Lab1\Sort.h"
 
 template<class T>
+///Class implements sorting by Quick sort.
 class QuickSort : public Sort<T> {
 private:
+    
+    /// The function swaps elements
     void swap(T* a, T* b)
     {
         T t = *a;
         *a = *b;
         *b = t;
     }
+   
+    /// The Partition function returns an index with a supporting element dividing the array into two parts; the left - the elements of which are smaller than the supporting element, and the right - the elements of which are larger than the supporting element
+    /// @param array Array we want to sort
+    /// @param low The starting element of the subarray
+    /// @param high The final element of the subarray
+    /// @returns An index with a supporting element
     int partition(T* array, int low, int high)
     {
        T pivot = array[high];
-        int i
-            = (low
-                - 1); 
+        int i= (low- 1); 
 
         for (int j = low; j <= high - 1; j++) {
-     
             if (array[j] < pivot) {
                 i++; 
                 swap(&array[i], &array[j]);
@@ -31,7 +37,10 @@ private:
         return (i + 1);
     }
 
- 
+   ///The function performs partial sorting of the array low to high index
+    ///@param array Array we want to sort
+    ///@param low The starting element of the subarray
+    ///@param high The final element of the subarray
     void quickSort(T* array, int const low, int const high)
     {
         if (low < high) {
@@ -43,7 +52,10 @@ private:
 
 
 public:
-   
+    /// Method for sorting arrays by Quick sort
+     /// @param array is array we want to sort
+     /// @param size is the size ot this array
+     /// @warning The function will not work if the list is empty
     void sort(T* array, int size) override {
         if ((size == 0))
             throw std::out_of_range("Your list is empty ");
