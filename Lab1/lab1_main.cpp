@@ -8,14 +8,12 @@
 //and remove WITH_MAIN in the doctest.cpp file
 namespace lab {
     int doctest() {
-    
-      doctest::Context context;
-return context.run();
+     doctest::Context context;
+     return context.run();
     }
 
 int main() {
     doctest();
-    int count;
     Interface user_interface;
     user_interface.start();
    

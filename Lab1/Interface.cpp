@@ -1,18 +1,13 @@
-
 #include "Interface.h"
 
 void Interface::random_int(int count, List<int>* list) {
     int res;
-
     for (int i = 0; i < count; i++) {
         srand(time(nullptr) + i);
         res = rand() % 100;
-
         list->add(res);
     }
 }
-
-
 
 void Interface::random_string(int count, List<std::string>* list) {
     std::string res;
@@ -27,10 +22,6 @@ void Interface::random_string(int count, List<std::string>* list) {
         list->add(res);
     }
 }
-
-
-
-
 
 void Interface::work_with_string_list() {
     List<std::string>* list;
@@ -175,7 +166,6 @@ void Interface::work_with_string_list() {
 void  Interface::work_with_int_list() {
 
     List<int>* list;
-
     int list_type;
     std::cout << "Choose type of List\n"
         "[1] Array List\n"

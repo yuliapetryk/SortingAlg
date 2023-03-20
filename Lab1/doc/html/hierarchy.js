@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "Interface", "class_interface.html", null ],
     [ "List< T >", "class_list.html", [
       [ "ArrayList< T >", "class_array_list.html", null ],
       [ "LinkedList< T >", "class_linked_list.html", null ]
