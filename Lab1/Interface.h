@@ -2,8 +2,6 @@
 #define INTERFACE_H
 
 #include <iostream>
-//#include "..\Lab1\ArrayList.h"
-//#include "..\Lab1\List.h"
 #include "..\Lab1\ArrayList.h"
 #include "..\Lab1\LinkedList.h"
 #include "..\Lab1\BubbleSort.h"
