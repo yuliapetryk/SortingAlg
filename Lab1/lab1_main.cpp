@@ -1,5 +1,7 @@
-#include "..\Lab1\doctest.h"
 #include "Interface.h"
+#include "..\Lab1\doctest.h"
+
+
 //In order to turn off the text mode,
 //do you need to comment the function doctest,
 //namespase lab,
@@ -7,14 +9,18 @@
 namespace lab {
     int doctest() {
     
-       doctest::Context context;
+      doctest::Context context;
 return context.run();
     }
 
-    int main() {
-        doctest();
-        start();
-        return 0;
+int main() {
+    doctest();
+    int count;
+    Interface user_interface;
+    user_interface.start();
+   
+    return 0;
+}
 
-    }
+    
 }
