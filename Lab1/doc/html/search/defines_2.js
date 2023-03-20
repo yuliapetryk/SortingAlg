@@ -55,7 +55,7 @@ var searchData=
   ['doctest_5fcmp_5fne_52',['DOCTEST_CMP_NE',['../doctest_8h.html#a4848f1d467fb5ef1dae4f31d56b8760a',1,'doctest.h']]],
   ['doctest_5fcomparison_5freturn_5ftype_53',['DOCTEST_COMPARISON_RETURN_TYPE',['../doctest_8h.html#a4a746a6cb24ff5b89c7b9a86a20335e8',1,'doctest.h']]],
   ['doctest_5fcompiler_54',['DOCTEST_COMPILER',['../doctest_8h.html#a04223c76a58ee7c4f865afb6d57d048f',1,'doctest.h']]],
-  ['doctest_5fconfig_5fimplement_55',['DOCTEST_CONFIG_IMPLEMENT',['../lab1__test_8cpp.html#adf980eb1ed0df2191c56fd3d218c2819',1,'lab1_test.cpp']]],
+  ['doctest_5fconfig_5fimplement_5fwith_5fmain_55',['DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN',['../lab1__test_8cpp.html#a623b8690a262536536a43eab2d7df03d',1,'lab1_test.cpp']]],
   ['doctest_5fconfig_5fno_5fexceptions_56',['DOCTEST_CONFIG_NO_EXCEPTIONS',['../doctest_8h.html#a8d99d050db88cb183c1d02bba4e798b0',1,'doctest.h']]],
   ['doctest_5fconfig_5fno_5ftry_5fcatch_5fin_5fasserts_57',['DOCTEST_CONFIG_NO_TRY_CATCH_IN_ASSERTS',['../doctest_8h.html#a631e7295c7abd3a071464fae6be07250',1,'doctest.h']]],
   ['doctest_5fconfig_5fposix_5fsignals_58',['DOCTEST_CONFIG_POSIX_SIGNALS',['../doctest_8h.html#a03d1f35ae32484c0778dc0130e41de35',1,'doctest.h']]],

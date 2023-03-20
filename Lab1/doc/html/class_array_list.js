@@ -10,7 +10,7 @@ var class_array_list =
     [ "remove", "class_array_list.html#a77f2faaacda526a5b93f308796360fc7", null ],
     [ "sort", "class_array_list.html#ab26aea2972d7a5de3067d3b2dddb537f", null ],
     [ "to_string", "class_array_list.html#ae16941ad0136eb6917377b8ea2187d7c", null ],
-    [ "arr", "class_array_list.html#a0bde1b80735b8730db10070f6d3999cc", null ],
-    [ "arr_size", "class_array_list.html#a3f53d6d957b3dae00c0b98aab6c2265c", null ],
+    [ "array", "class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a", null ],
+    [ "array_size", "class_array_list.html#a1bfbfc1e6604bbf8a9b4430984768e19", null ],
     [ "size", "class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61", null ]
 ];

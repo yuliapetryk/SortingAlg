@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lab1: C:/Users/User/Desktop/PI-23/Sem 2/OOP/Lab1/ArrayList.h Source File</title>
+<title>Lab1: ArrayList.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
   <td id="projectalign">
    <div id="projectname">Lab1
    </div>
-   <div id="projectbrief">Working with lists</div>
+   <div id="projectbrief">Working with list</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('_array_list_8h_source.html',''); initR
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">C:/Users/User/Desktop/PI-23/Sem 2/OOP/Lab1/ArrayList.h</div></div>
+  <div class="headertitle"><div class="title">ArrayList.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="_array_list_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ARRAYLIST_H</span></div>
@@ -109,24 +109,24 @@ $(document).ready(function(){initNavTree('_array_list_8h_source.html',''); initR
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_array_list.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_array_list.html">ArrayList</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_list.html">List</a>&lt;T&gt; {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">   11</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a> = 0;          </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_array_list.html#a3f53d6d957b3dae00c0b98aab6c2265c">   12</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_array_list.html#a3f53d6d957b3dae00c0b98aab6c2265c">arr_size</a> = 2;      </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_array_list.html#a0bde1b80735b8730db10070f6d3999cc">   13</a></span>    T* <a class="code hl_variable" href="class_array_list.html#a0bde1b80735b8730db10070f6d3999cc">arr</a> = <span class="keyword">new</span> T[16];    </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_array_list.html#a1bfbfc1e6604bbf8a9b4430984768e19">   12</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_array_list.html#a1bfbfc1e6604bbf8a9b4430984768e19">array_size</a> = 2;      </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">   13</a></span>    T* <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a> = <span class="keyword">new</span> T[16];    </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_array_list.html#aab5f61bde5be6ed45b2319eb433280f7">   17</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_array_list.html#aab5f61bde5be6ed45b2319eb433280f7">change_array_size</a>(<span class="keywordtype">int</span> new_size) {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordflow">while</span> (new_size &lt;= <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a>) new_size *= 2;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        T* temp = <span class="keyword">new</span> T[new_size];</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array_size; i++) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            temp[i] = array[i];</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_array_list.html#a1bfbfc1e6604bbf8a9b4430984768e19">array_size</a>; i++) {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            temp[i] = <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>[i];</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">delete</span>[] array;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        array = temp;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        array_size = new_size;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">delete</span>[] <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a> = temp;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_variable" href="class_array_list.html#a1bfbfc1e6604bbf8a9b4430984768e19">array_size</a> = new_size;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_array_list.html#a4af637822f64b61267b1e0ed4d4fca33">   33</a></span>     <a class="code hl_function" href="class_array_list.html#a4af637822f64b61267b1e0ed4d4fca33">~ArrayList</a>() {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">delete</span>[] array;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">delete</span>[] <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_array_list.html#ada456f3bfb5c8b16c1e48bbe80d69b16">   46</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_array_list.html#ada456f3bfb5c8b16c1e48bbe80d69b16">add</a>(T obj, <span class="keywordtype">int</span> index = -1)<span class="keyword"> override </span>{</div>
@@ -135,14 +135,14 @@ $(document).ready(function(){initNavTree('_array_list_8h_source.html',''); initR
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (index &gt; <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a>)</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;index &quot;</span> + std::to_string(index) + <span class="stringliteral">&quot; is greater then the size&quot;</span>);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a> == array_size)</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_function" href="class_array_list.html#aab5f61bde5be6ed45b2319eb433280f7">change_array_size</a>(array_size / 2 * 3 + 2);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a> == <a class="code hl_variable" href="class_array_list.html#a1bfbfc1e6604bbf8a9b4430984768e19">array_size</a>)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_function" href="class_array_list.html#aab5f61bde5be6ed45b2319eb433280f7">change_array_size</a>(<a class="code hl_variable" href="class_array_list.html#a1bfbfc1e6604bbf8a9b4430984768e19">array_size</a> / 2 * 3 + 2);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        T temp1 = obj;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        T temp2;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">while</span> (index &lt;= <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a>) {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            temp2 = array[index];</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            array[index] = temp1;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            temp2 = <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>[index];</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>[index] = temp1;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            std::swap(temp1, temp2);</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            index++;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
@@ -157,7 +157,7 @@ $(document).ready(function(){initNavTree('_array_list_8h_source.html',''); initR
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            index = <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a> - 1;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = index; i &lt; <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a> - 1; i++) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            array[i] = array[i + 1];</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>[i] = <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>[i + 1];</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a>--;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
@@ -168,13 +168,13 @@ $(document).ready(function(){initNavTree('_array_list_8h_source.html',''); initR
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (index &lt; 0)</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            index = <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a> - 1;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">return</span> array[index];</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>[index];</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_array_list.html#a9051c8b11431f13165ea796fc02176ec">  105</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_array_list.html#a9051c8b11431f13165ea796fc02176ec">find</a>(T obj)<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordtype">int</span> res = -1;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a>; i++) {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">if</span> (array[i] == obj) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>[i] == obj) {</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                res = i;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            }</div>
@@ -183,14 +183,14 @@ $(document).ready(function(){initNavTree('_array_list_8h_source.html',''); initR
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_array_list.html#a0a2156d172ee288d8d9f2307889324ce">  117</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_array_list.html#a0a2156d172ee288d8d9f2307889324ce">clear</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keyword">delete</span>[] array;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keyword">delete</span>[] <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a> = 0;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        array_size = 16;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        array = <span class="keyword">new</span> T[array_size];</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <a class="code hl_variable" href="class_array_list.html#a1bfbfc1e6604bbf8a9b4430984768e19">array_size</a> = 16;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a> = <span class="keyword">new</span> T[<a class="code hl_variable" href="class_array_list.html#a1bfbfc1e6604bbf8a9b4430984768e19">array_size</a>];</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="class_array_list.html#ab26aea2972d7a5de3067d3b2dddb537f">  126</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_array_list.html#ab26aea2972d7a5de3067d3b2dddb537f">sort</a>(<a class="code hl_class" href="class_sort.html">Sort&lt;T&gt;</a>* <a class="code hl_function" href="class_array_list.html#ab26aea2972d7a5de3067d3b2dddb537f">sort</a>)<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      <a class="code hl_function" href="class_array_list.html#ab26aea2972d7a5de3067d3b2dddb537f">sort</a>-&gt;sort(array, <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      <a class="code hl_function" href="class_array_list.html#ab26aea2972d7a5de3067d3b2dddb537f">sort</a>-&gt;sort(<a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>, <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a>);</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
@@ -203,9 +203,9 @@ $(document).ready(function(){initNavTree('_array_list_8h_source.html',''); initR
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        ss &lt;&lt; <span class="charliteral">&#39;[&#39;</span>;</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a> != 0) {</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a> - 1; i++) {</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                ss &lt;&lt; array[i] &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                ss &lt;&lt; <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>[i] &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            }</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            ss &lt;&lt; array[<a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a> - 1];</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            ss &lt;&lt; <a class="code hl_variable" href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">array</a>[<a class="code hl_variable" href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">size</a> - 1];</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        }</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        ss &lt;&lt; <span class="charliteral">&#39;]&#39;</span>;</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
@@ -217,11 +217,11 @@ $(document).ready(function(){initNavTree('_array_list_8h_source.html',''); initR
 <div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="class_array_list.html">ArrayList</a></div><div class="ttdoc">The class implements work with a array list.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:9</div></div>
 <div class="ttc" id="aclass_array_list_html_a040edbbcbc0865a9c6e1da0a4ae51f61"><div class="ttname"><a href="class_array_list.html#a040edbbcbc0865a9c6e1da0a4ae51f61">ArrayList::size</a></div><div class="ttdeci">int size</div><div class="ttdoc">Value for saving count of elements in ArrayList.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:11</div></div>
 <div class="ttc" id="aclass_array_list_html_a0a2156d172ee288d8d9f2307889324ce"><div class="ttname"><a href="class_array_list.html#a0a2156d172ee288d8d9f2307889324ce">ArrayList::clear</a></div><div class="ttdeci">void clear() override</div><div class="ttdoc">Remove all elements of the list.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:117</div></div>
-<div class="ttc" id="aclass_array_list_html_a0bde1b80735b8730db10070f6d3999cc"><div class="ttname"><a href="class_array_list.html#a0bde1b80735b8730db10070f6d3999cc">ArrayList::arr</a></div><div class="ttdeci">T * arr</div><div class="ttdoc">Array with elements.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:13</div></div>
+<div class="ttc" id="aclass_array_list_html_a1bfbfc1e6604bbf8a9b4430984768e19"><div class="ttname"><a href="class_array_list.html#a1bfbfc1e6604bbf8a9b4430984768e19">ArrayList::array_size</a></div><div class="ttdeci">int array_size</div><div class="ttdoc">Value for saving size of array in ArrayList.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:12</div></div>
 <div class="ttc" id="aclass_array_list_html_a37ae6d64eb140e2276da869ec9d3475a"><div class="ttname"><a href="class_array_list.html#a37ae6d64eb140e2276da869ec9d3475a">ArrayList::get_size</a></div><div class="ttdeci">int get_size() override</div><div class="ttdoc">Return the size of list.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:133</div></div>
-<div class="ttc" id="aclass_array_list_html_a3f53d6d957b3dae00c0b98aab6c2265c"><div class="ttname"><a href="class_array_list.html#a3f53d6d957b3dae00c0b98aab6c2265c">ArrayList::arr_size</a></div><div class="ttdeci">int arr_size</div><div class="ttdoc">Value for saving size of array in ArrayList.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:12</div></div>
 <div class="ttc" id="aclass_array_list_html_a4af637822f64b61267b1e0ed4d4fca33"><div class="ttname"><a href="class_array_list.html#a4af637822f64b61267b1e0ed4d4fca33">ArrayList::~ArrayList</a></div><div class="ttdeci">~ArrayList()</div><div class="ttdoc">Destructor of ArrayList.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:33</div></div>
 <div class="ttc" id="aclass_array_list_html_a77f2faaacda526a5b93f308796360fc7"><div class="ttname"><a href="class_array_list.html#a77f2faaacda526a5b93f308796360fc7">ArrayList::remove</a></div><div class="ttdeci">void remove(int index) override</div><div class="ttdoc">Remove element by index from list.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:73</div></div>
+<div class="ttc" id="aclass_array_list_html_a7a2e387e093f10658fe2c22c77c2061a"><div class="ttname"><a href="class_array_list.html#a7a2e387e093f10658fe2c22c77c2061a">ArrayList::array</a></div><div class="ttdeci">T * array</div><div class="ttdoc">Array with elements.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:13</div></div>
 <div class="ttc" id="aclass_array_list_html_a9051c8b11431f13165ea796fc02176ec"><div class="ttname"><a href="class_array_list.html#a9051c8b11431f13165ea796fc02176ec">ArrayList::find</a></div><div class="ttdeci">int find(T obj) override</div><div class="ttdoc">Find the index of an element in the list.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:105</div></div>
 <div class="ttc" id="aclass_array_list_html_aab5f61bde5be6ed45b2319eb433280f7"><div class="ttname"><a href="class_array_list.html#aab5f61bde5be6ed45b2319eb433280f7">ArrayList::change_array_size</a></div><div class="ttdeci">void change_array_size(int new_size)</div><div class="ttdoc">Method to change the size of an array.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:17</div></div>
 <div class="ttc" id="aclass_array_list_html_ab26aea2972d7a5de3067d3b2dddb537f"><div class="ttname"><a href="class_array_list.html#ab26aea2972d7a5de3067d3b2dddb537f">ArrayList::sort</a></div><div class="ttdeci">void sort(Sort&lt; T &gt; *sort) override</div><div class="ttdoc">Method for sort the list by certain sort.</div><div class="ttdef"><b>Definition:</b> ArrayList.h:126</div></div>
