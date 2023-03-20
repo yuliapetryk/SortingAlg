@@ -24,6 +24,9 @@
     <ClCompile Include="lab1_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lab1_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -49,6 +52,12 @@
     </ClInclude>
     <ClInclude Include="QuickSort.h">
       <Filter>sorts</Filter>
+    </ClInclude>
+    <ClInclude Include="doctest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
