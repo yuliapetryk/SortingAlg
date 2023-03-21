@@ -10,7 +10,6 @@
 #include "..\Lab1\QuickSort.h"
 
 /// Ñlass implements user interaction with the program
-
 class Interface {
 private:
     ///Generate random objects of the integer type.
