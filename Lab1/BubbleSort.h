@@ -8,12 +8,7 @@ template<class T>
 class BubbleSort : public Sort<T> {
 private:
    
-    /// This function  compares two objects of type T. 
-    /// @returns If the objects are equal, the function returns 0, and if the first object is greater than the second, it returns 1, otherwise -1.
-    int compare(T& a, T& b) {
-        if (a == b) return 0;
-        else return a > b;
-    }
+    
 public:
     /// Method for sorting arrays by Bubble sort
      /// @param array is array we want to sort
@@ -27,7 +22,7 @@ public:
             T temp;
             for (int i = 1; i < size; i++) {
                 for (int j = 0; j < size - i; j++) {
-                    if (compare(array[j], array[j + 1]) == 1) {
+                    if ( Sort<T>::compare(array[j], array[j + 1]) == 1) {
                         temp = array[j + 1];
                         array[j + 1] = array[j];
                         array[j] = temp;

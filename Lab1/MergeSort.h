@@ -18,13 +18,7 @@ private:
             Part[i] = array[position + i];
     }
 
-    /// This function  compares two objects of type T. 
-    /// @returns If the objects are equal, the function returns 0, and if the first object is greater than the second, it returns 1, otherwise -1.
-    int compare(T& a, T& b) {
-        if (a == b) return 0;
-        else return a > b;
-    }
-
+    
     /// Copy the remaining elements, if there are any
     /// @param Part The temp array
     /// @param array Array we want to sort
@@ -59,7 +53,7 @@ private:
         k = left;
 
         while (i < left_size && j < right_size) {
-            if (compare(LeftPart[i], RightPart[j]) <= 0) {
+            if (Sort<T>::compare(LeftPart[i], RightPart[j]) <= 0) {
                 array[k] = LeftPart[i];
                 i++;
             }
