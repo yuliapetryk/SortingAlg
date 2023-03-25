@@ -107,10 +107,19 @@ $(document).ready(function(){initNavTree('_sort_8h_source.html',''); initResizab
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>   </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_sort.html#ad490c2a6795930c285bbf98cdddeaa45">   12</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sort.html#ad490c2a6795930c285bbf98cdddeaa45">sort</a>(T* array, <span class="keywordtype">int</span> size) = 0;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>};</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_sort.html#a0858c9d1ae40ff901d6ef6bb43b25d40">   18</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_sort.html#a0858c9d1ae40ff901d6ef6bb43b25d40">compare</a>(T&amp; a, T&amp; b) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">if</span> (a == b) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">else</span> <span class="keywordflow">return</span> a &gt; b;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_sort_html"><div class="ttname"><a href="class_sort.html">Sort</a></div><div class="ttdoc">Class implements Sort.</div><div class="ttdef"><b>Definition:</b> Sort.h:6</div></div>
+<div class="ttc" id="aclass_sort_html_a0858c9d1ae40ff901d6ef6bb43b25d40"><div class="ttname"><a href="class_sort.html#a0858c9d1ae40ff901d6ef6bb43b25d40">Sort::compare</a></div><div class="ttdeci">int compare(T &amp;a, T &amp;b)</div><div class="ttdoc">This function compares two objects of type T.</div><div class="ttdef"><b>Definition:</b> Sort.h:18</div></div>
 <div class="ttc" id="aclass_sort_html_ad490c2a6795930c285bbf98cdddeaa45"><div class="ttname"><a href="class_sort.html#ad490c2a6795930c285bbf98cdddeaa45">Sort::sort</a></div><div class="ttdeci">virtual void sort(T *array, int size)=0</div><div class="ttdoc">Virtual method for sort arrays.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

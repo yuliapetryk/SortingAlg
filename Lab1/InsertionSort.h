@@ -8,7 +8,7 @@ template<class T>
 ///Class implements sorting by Insertion sort.
 class InsertionSort : public Sort<T> {
 public:
-    /// Method for sorting arrays by Insertion sort
+    /// A method for sorting arrays by Insertion sort
      /// @param array is array we want to sort
      /// @param size is the size ot this array
      /// @warning The function will not work if the list is empty

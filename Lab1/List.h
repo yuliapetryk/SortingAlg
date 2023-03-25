@@ -10,7 +10,7 @@ template<class T>
 class List {
 public:
    
-      /// Add element to list.
+      /// Adds element to list.
      ///
      ///Adds an element and puts it in a certain position.
      /// 
@@ -22,7 +22,7 @@ public:
     virtual void add(T obj, int index = -1) = 0;
 
 
-     ///Remove element by index from list.
+     ///Removes element by index from list.
      ///
      /// If we remove element by index, all elements with bigger index moved.
      /// @note If index is less than 0, removed last element in list.
@@ -31,7 +31,7 @@ public:
     virtual void remove(int index) = 0;
 
 
-    /// Get element by index from list.
+    /// Gets element by index from list.
     /// @note If index is less than 0, removed last element from the list.
     /// @warning If index is bigger or equals to the size, than method must throw std::out_of_range exeption.
     /// @param   index   The index of the element in the list we want to get.
@@ -39,7 +39,7 @@ public:
     virtual T& get(int index) = 0;
 
    
-     ///Find the index of an element in the list.
+     ///Finds the index of an element in the list.
      ///
      /// If the element is not contained in the list, method return -1.
      /// @note If the list contains great than 1 such element, method return tne first index.
@@ -48,21 +48,21 @@ public:
     virtual int find(T obj) = 0;
 
   
-    /// Remove all elements of the list.  
+    /// Removes all elements of the list.  
     virtual void clear() = 0;
 
     
-    ///Method for sort the list by certain sort.
+    /// Sorts the list by certain sort.
     /// @param   sort  The pointer on Sort object which have one method - 'sort'. It sort list by certain type.
     virtual void sort(Sort<T>* sort) = 0 ;
 
-    /// Return the size of list.
+    /// Returns the size of list.
     /// @return  size of list.
     virtual int get_size() = 0;
 
   
     /// Writes the list as a string
-    /// @retutn The string of this List.
+    /// @return The string of this List.
     virtual std::string to_string() = 0;
 
   

@@ -10,7 +10,7 @@ private:
    
     
 public:
-    /// Method for sorting arrays by Bubble sort
+    /// A method for sorting arrays by Bubble sort
      /// @param array is array we want to sort
      /// @param size is the size ot this array
      /// @warning The function will not work if the list is empty

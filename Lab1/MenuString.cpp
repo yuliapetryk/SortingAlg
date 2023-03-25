@@ -2,10 +2,6 @@
 #include "MenuInt.h"
 #include <stdlib.h>
 
-
-
-
-
 void MenuString::random_string(int count, List<std::string>* list) {
     std::string res;
     const std::string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -43,90 +39,68 @@ void MenuString::work_with_string_list(List<std::string>* list) {
     }
 }
 
+void MenuString::command_random(List<std::string>* list) {
+    int alpha;
+    std::cout << "Enter count of random objects you want to add:" << std::endl;
+    scanf("%d", &alpha);
+    random_string(alpha, list);
+}
+
+void MenuString::command_add(List<std::string>* list) {
+    int alpha;
+    char beta[20];
+    std::cout << "Enter the object:" << std::endl;
+
+    scanf("%s", beta);
+    std::cout << "Enter an index of this object(-1 -> push to end):" << std::endl;
+    scanf("%d", &alpha);
+
+    list->add(beta, alpha);
+    std::cout << "The object successfully added" << std::endl;
+}
 
 
+void MenuString::command_find(List<std::string>* list) {
+    char beta[20];
+    std::cout << "Enter the object with index you want:" << std::endl;
+    scanf("%s", beta);
+
+    std::cout << "index: " << list->find(beta) << std::endl;
+}
 
 void MenuString::menu_for_string(List<std::string>* list) {
     
         switch (text_of_menu()) {
-            int alpha;
-            char beta[20];
         case 1:
-            std::cout << "Enter count of random objects you want to add:" << std::endl;
-            scanf("%d", &alpha);
-            random_string(alpha, list);
+            command_random(list);
             break;
 
         case 2:
-            std::cout << "Enter the object:" << std::endl;
-
-            scanf("%s", beta);
-            std::cout << "Enter an index of this object(-1 -> push to end):" << std::endl;
-            scanf("%d", &alpha);
-
-            list->add(beta, alpha);
-            std::cout << "The object successfully added" << std::endl;
+            command_add(list);
             break;
 
         case 3:
-            std::cout << "Enter the index of object(-1 -> remove last):" << std::endl;
-            scanf("%d", &alpha);
-
-            list->remove(alpha);
+            command_remove(list);
             break;
 
         case 4:
-            std::cout << "Enter the index of object you want(-1 -> the last):" << std::endl;
-            scanf("%d", &alpha);
-
-            std::cout << "obj: " << list->get(alpha) << std::endl;
+            command_get(list);
             break;
 
         case 5:
-            std::cout << "Enter the object with index you want:" << std::endl;
-            scanf("%s", beta);
-
-            std::cout << "index: " << list->find(beta) << std::endl;
+            command_find(list);
             break;
 
         case 6:
-            std::cout << "Now List is empty." << std::endl;
-            list->clear();
-
+            command_clear(list);
             break;
 
         case 7:
-            Sort<std::string> *sort;
-
-            std::cout << "Choose sort\n"
-                "[1] BubbleSort\n"
-                "[2] InsertionSort\n"
-                "[3] MergeSort\n"
-                "[4] QuickSort" << std::endl;
-            scanf("%d", &alpha);
-
-            switch (alpha) {
-            case 1:
-                sort = new BubbleSort<std::string>;
-                break;
-            case 2:
-                sort = new InsertionSort<std::string>;
-                break;
-            case 3:
-                sort = new MergeSort<std::string>;
-                break;
-            default:
-                sort = new QuickSort<std::string>;
-            }
-
-
-
-            list->sort(sort);
-            std::cout << "The list successfully sorted" << std::endl;
+            command_sort(list);
             break;
 
         case 8:
-            std::cout << "Your list:" << std::endl << *list << std::endl;
+            command_print(list);
             break;
 
         default:
@@ -137,26 +111,25 @@ void MenuString::menu_for_string(List<std::string>* list) {
 }
 
 
-
-
 void MenuString::start_with_string_list() {
 
     List<std::string>* list;
-
-    switch (list_type()) {
-    case 1:
-        list = new ArrayList<std::string>;
-        std::cout << "Array list is created" << std::endl;
-        break;
-    case 2:
-        list = new LinkedList<std::string>;
-        std::cout << "Linked list is created" << std::endl;
-        break;
-    default:
-        list = new ArrayList<std::string>;
-        std::cout << "Array list is created" << std::endl;
-    }
-    std::cout << std::endl;
+    
+        switch (list_type()) {
+        case 1:
+            list = new ArrayList<std::string>;
+            std::cout << "Array list is created" << std::endl;
+            break;
+        case 2:
+            list = new LinkedList<std::string>;
+            std::cout << "Linked list is created" << std::endl;
+            break;
+        default:
+            list = new ArrayList<std::string>;
+            std::cout << "Array list is created" << std::endl;
+        }
+        std::cout << std::endl;
+    
     work_with_string_list(list);
 
 }

@@ -1,9 +1,12 @@
 var hierarchy =
 [
-    [ "Interface", "class_interface.html", null ],
     [ "List< T >", "class_list.html", [
       [ "ArrayList< T >", "class_array_list.html", null ],
       [ "LinkedList< T >", "class_linked_list.html", null ]
+    ] ],
+    [ "Menu", "class_menu.html", [
+      [ "MenuInt", "class_menu_int.html", null ],
+      [ "MenuString", "class_menu_string.html", null ]
     ] ],
     [ "LinkedList< T >::Node", "class_linked_list_1_1_node.html", null ],
     [ "Sort< T >", "class_sort.html", [

@@ -7,14 +7,14 @@
 //do you need to comment the function doctest,
 //namespase lab,
 //and remove WITH_MAIN in the doctest.cpp file
-//namespace lab {
-   // int doctest() {
-   //  doctest::Context context;
-   //  return context.run();
-   // }
+namespace lab {
+    int doctest() {
+     doctest::Context context;
+     return context.run();
+    }
  
 int main() {
-    // doctest();
+     doctest();
     int type_in_list;
     std::cout << "---Choose type in List...\n"
         "[1] int\n"
@@ -37,4 +37,4 @@ int main() {
 }
 
     
-//}
+}

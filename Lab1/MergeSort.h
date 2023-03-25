@@ -8,7 +8,7 @@ template<class T>
 class MergeSort : public Sort<T> {
 private:
 
-    ///Copy data to temp arrays
+    ///Copies data to temp arrays
     /// @param Part The temp array
     /// @param array Array we want to sort
     /// @param size Size of main array
@@ -19,7 +19,7 @@ private:
     }
 
     
-    /// Copy the remaining elements, if there are any
+    /// Copies the remaining elements, if there are any
     /// @param Part The temp array
     /// @param array Array we want to sort
     /// @param size Size of main array
@@ -83,7 +83,7 @@ private:
     }
     
 public:
-    /// Method for sorting arrays by Merge sort
+    /// A method for sorting arrays by Merge sort
       /// @param array is array we want to sort
       /// @param size is the size ot this array
       /// @warning The function will not work if the list is empty

@@ -121,7 +121,7 @@ Inheritance diagram for MergeSort&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a16cbd423e3c336d1a9f0f57651fb139b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#a16cbd423e3c336d1a9f0f57651fb139b">sort</a> (T *array, int size) override</td></tr>
-<tr class="memdesc:a16cbd423e3c336d1a9f0f57651fb139b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for sorting arrays by Merge sort.  <a href="class_merge_sort.html#a16cbd423e3c336d1a9f0f57651fb139b">More...</a><br /></td></tr>
+<tr class="memdesc:a16cbd423e3c336d1a9f0f57651fb139b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for sorting arrays by Merge sort.  <a href="class_merge_sort.html#a16cbd423e3c336d1a9f0f57651fb139b">More...</a><br /></td></tr>
 <tr class="separator:a16cbd423e3c336d1a9f0f57651fb139b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad490c2a6795930c285bbf98cdddeaa45"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sort.html#ad490c2a6795930c285bbf98cdddeaa45">sort</a> (T *array, int size)=0</td></tr>
 <tr class="memdesc:ad490c2a6795930c285bbf98cdddeaa45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual method for sort arrays.  <a href="class_sort.html#ad490c2a6795930c285bbf98cdddeaa45">More...</a><br /></td></tr>
@@ -130,13 +130,10 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a27495a1f6041585fb2866176c13f5458"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#a27495a1f6041585fb2866176c13f5458">split_array</a> (T *Part, T *array, int size, int position)</td></tr>
-<tr class="memdesc:a27495a1f6041585fb2866176c13f5458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data to temp arrays.  <a href="class_merge_sort.html#a27495a1f6041585fb2866176c13f5458">More...</a><br /></td></tr>
+<tr class="memdesc:a27495a1f6041585fb2866176c13f5458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data to temp arrays.  <a href="class_merge_sort.html#a27495a1f6041585fb2866176c13f5458">More...</a><br /></td></tr>
 <tr class="separator:a27495a1f6041585fb2866176c13f5458"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d49dc08d92cb903dcfd6fc35362a30d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#a1d49dc08d92cb903dcfd6fc35362a30d">compare</a> (T &amp;a, T &amp;b)</td></tr>
-<tr class="memdesc:a1d49dc08d92cb903dcfd6fc35362a30d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function compares two objects of type T.  <a href="class_merge_sort.html#a1d49dc08d92cb903dcfd6fc35362a30d">More...</a><br /></td></tr>
-<tr class="separator:a1d49dc08d92cb903dcfd6fc35362a30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e668a2a60a342855a24fbb5428e569b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#a6e668a2a60a342855a24fbb5428e569b">complete</a> (int index_array, int size, T *Part, int index_subarray, T *array)</td></tr>
-<tr class="memdesc:a6e668a2a60a342855a24fbb5428e569b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the remaining elements, if there are any.  <a href="class_merge_sort.html#a6e668a2a60a342855a24fbb5428e569b">More...</a><br /></td></tr>
+<tr class="memdesc:a6e668a2a60a342855a24fbb5428e569b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the remaining elements, if there are any.  <a href="class_merge_sort.html#a6e668a2a60a342855a24fbb5428e569b">More...</a><br /></td></tr>
 <tr class="separator:a6e668a2a60a342855a24fbb5428e569b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a648d01791ec8545f0dd7c61d5787e2a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#a648d01791ec8545f0dd7c61d5787e2a1">merge</a> (T *array, int left, int mid, int right)</td></tr>
 <tr class="memdesc:a648d01791ec8545f0dd7c61d5787e2a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">An auxiliary function that combines parts of the array A from the l to the m element and from the m+1th to the r element into one ordered subarray.  <a href="class_merge_sort.html#a648d01791ec8545f0dd7c61d5787e2a1">More...</a><br /></td></tr>
@@ -144,52 +141,18 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:ad179ab71a2d5fe0a1b073b9a84c32a33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#ad179ab71a2d5fe0a1b073b9a84c32a33">mergeSort</a> (T *array, int left, int right)</td></tr>
 <tr class="memdesc:ad179ab71a2d5fe0a1b073b9a84c32a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function performs a partial sort, ordering its elements from left to right.  <a href="class_merge_sort.html#ad179ab71a2d5fe0a1b073b9a84c32a33">More...</a><br /></td></tr>
 <tr class="separator:ad179ab71a2d5fe0a1b073b9a84c32a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_class_sort"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_sort')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_sort.html">Sort&lt; T &gt;</a></td></tr>
+<tr class="memitem:a0858c9d1ae40ff901d6ef6bb43b25d40 inherit pro_methods_class_sort"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sort.html#a0858c9d1ae40ff901d6ef6bb43b25d40">compare</a> (T &amp;a, T &amp;b)</td></tr>
+<tr class="memdesc:a0858c9d1ae40ff901d6ef6bb43b25d40 inherit pro_methods_class_sort"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function compares two objects of type T.  <a href="class_sort.html#a0858c9d1ae40ff901d6ef6bb43b25d40">More...</a><br /></td></tr>
+<tr class="separator:a0858c9d1ae40ff901d6ef6bb43b25d40 inherit pro_methods_class_sort"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
 class MergeSort&lt; T &gt;</div><p >Class implements sorting by Merge sort. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1d49dc08d92cb903dcfd6fc35362a30d" name="a1d49dc08d92cb903dcfd6fc35362a30d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d49dc08d92cb903dcfd6fc35362a30d">&#9670;&#160;</a></span>compare()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="class_merge_sort.html">MergeSort</a>&lt; T &gt;::compare </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This function compares two objects of type T. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the objects are equal, the function returns 0, and if the first object is greater than the second, it returns 1, otherwise -1. </dd></dl>
-
-</div>
-</div>
 <a id="a6e668a2a60a342855a24fbb5428e569b" name="a6e668a2a60a342855a24fbb5428e569b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e668a2a60a342855a24fbb5428e569b">&#9670;&#160;</a></span>complete()</h2>
 
@@ -244,7 +207,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Copy the remaining elements, if there are any. </p>
+<p>Copies the remaining elements, if there are any. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Part</td><td>The temp array </td></tr>
@@ -410,7 +373,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Method for sorting arrays by Merge sort. </p>
+<p>A method for sorting arrays by Merge sort. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>is array we want to sort </td></tr>
@@ -472,7 +435,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Copy data to temp arrays. </p>
+<p>Copies data to temp arrays. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Part</td><td>The temp array </td></tr>

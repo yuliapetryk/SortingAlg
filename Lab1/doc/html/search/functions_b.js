@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['sort_0',['sort',['../class_array_list.html#ab26aea2972d7a5de3067d3b2dddb537f',1,'ArrayList::sort()'],['../class_bubble_sort.html#a34d998a02d20d422ab14a5602fec2831',1,'BubbleSort::sort()'],['../class_insertion_sort.html#a9a5deccdda15c1d9beb3ac8d0105d6d5',1,'InsertionSort::sort()'],['../class_linked_list.html#a22952d9164c939c26c1e8a95922e4d48',1,'LinkedList::sort()'],['../class_list.html#ac4cef8e9c172496dc421fc5d0783e32c',1,'List::sort()'],['../class_merge_sort.html#a16cbd423e3c336d1a9f0f57651fb139b',1,'MergeSort::sort()'],['../class_quick_sort.html#a3b4bc2cc7fde611248ce413318f5ebcf',1,'QuickSort::sort()'],['../class_sort.html#ad490c2a6795930c285bbf98cdddeaa45',1,'Sort::sort()']]],
-  ['split_5farray_1',['split_array',['../class_merge_sort.html#a27495a1f6041585fb2866176c13f5458',1,'MergeSort']]],
-  ['start_2',['start',['../class_interface.html#afe499839ab91ec5bfda822d959f12833',1,'Interface']]],
-  ['swap_3',['swap',['../class_quick_sort.html#aa6db08beec5da0fae1b2efaa7a4d5ba3',1,'QuickSort']]]
+  ['random_5fint_0',['random_int',['../class_menu_int.html#acf931bd5cc09002b0181c1e3a53004e0',1,'MenuInt']]],
+  ['random_5fstring_1',['random_string',['../class_menu_string.html#a02b8ec38a237ee9258e6f5a27d3f445a',1,'MenuString']]],
+  ['remove_2',['remove',['../class_array_list.html#a77f2faaacda526a5b93f308796360fc7',1,'ArrayList::remove()'],['../class_linked_list.html#a229cb3654719b0cee079a5f26a0a3230',1,'LinkedList::remove()'],['../class_list.html#ac3b4b83b3ec104acff3321d6ba4b2bde',1,'List::remove()']]]
 ];

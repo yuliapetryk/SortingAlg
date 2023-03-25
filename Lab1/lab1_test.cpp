@@ -1,4 +1,4 @@
-#define DOCTEST_CONFIG_IMPLEMENT//_WITH_MAIN
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include "BubbleSort.h"
 #include "MergeSort.h"
@@ -6,7 +6,7 @@
 #include"QuickSort.h"
 #include "ArrayList.h"
 #include "LinkedList.h"
-
+#include "MenuInt.h"
 
 template <class T>
 std::string to_list_string(T* a,
@@ -25,6 +25,8 @@ std::string to_list_string(T* a,
     ss << ']';
     return ss.str();
 }
+
+
 
 
 TEST_CASE("Tests for int") {

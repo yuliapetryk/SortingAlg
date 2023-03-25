@@ -11,8 +11,8 @@ private:
     int size = 0;          ///< Value for saving count of elements in ArrayList.
     int array_size = 2;      ///< Value for saving size of array in ArrayList.
     T* array = new T[16];    ///< Array with elements.  
-  
-    /// Method to change the size of an array 
+
+   /// A method to change the size of an array 
     /// @param new_size The new array will have size new_size
     void change_array_size(int new_size) {
         while (new_size <= size) new_size *= 2;
@@ -25,16 +25,19 @@ private:
         array = temp;
         array_size = new_size;
     }
+    
 
 public:
     ///Destructor of ArrayList. 
     /// 
-    ///Delete the main dynamic array.
+    ///Deletes the main dynamic array.
      ~ArrayList() {
         delete[] array;
     }
 
-     /// Add element to Array list.
+    
+
+     /// Adds element to Array list.
      ///
      ///Adds an element and puts it in a certain position.
      /// 
@@ -64,7 +67,7 @@ public:
     }
 
 
-    ///Remove element by index from list.
+    ///Removes element by index from list.
     ///
     /// If we remove element by index, all elements with bigger index moved.
     /// @note If index is less than 0, removed last element in list.
@@ -82,7 +85,7 @@ public:
         size--;
     }
 
-    /// Get element by index from list.
+    /// Gets element by index from list.
     /// @note If index is less than 0, removed last element from the list.
     /// @warning If index is bigger or equals to the size, than method must throw std::out_of_range exeption.
     /// @param   index   The index of the element in the list we want to get.
@@ -96,7 +99,7 @@ public:
         return array[index];
     }
 
-    ///Find the index of an element in the list.
+    ///Finds the index of an element in the list.
     ///
     /// If the element is not contained in the list, method return -1.
     /// @note If the list contains great than 1 such element, method return tne first index.
@@ -113,7 +116,7 @@ public:
         return res;
     }
 
-    /// Remove all elements of the list.  
+    /// Removes all elements of the list.  
     void clear() override {
         delete[] array;
         size = 0;
@@ -121,14 +124,14 @@ public:
         array = new T[array_size];
     }
 
-    ///Method for sort the list by certain sort.
+    /// Sorts the list by certain sort.
     /// @param   sort  The pointer on Sort object which have one method - 'sort'. It sort list by certain type.
     void sort(Sort<T>* sort) override {
       sort->sort(array, size);
         
     }
 
-    /// Return the size of list.
+    /// Returns the size of list.
     /// @return  size of list.
     int get_size() override {
         return size;
