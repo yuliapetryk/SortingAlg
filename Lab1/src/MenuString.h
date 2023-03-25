@@ -2,12 +2,12 @@
 #define MENU_STRING
 
 #include <iostream>
-#include "..\Lab1\ArrayList.h"
-#include "..\Lab1\LinkedList.h"
-#include "..\Lab1\BubbleSort.h"
-#include "..\Lab1\InsertionSort.h"
-#include "..\Lab1\MergeSort.h"
-#include "..\Lab1\QuickSort.h"
+#include "ArrayList.h"
+#include "LinkedList.h"
+#include "BubbleSort.h"
+#include "InsertionSort.h"
+#include "MergeSort.h"
+#include "QuickSort.h"
 #include "Menu.h"
 
 /// Class implements user interaction with the program if we have a list with string elements

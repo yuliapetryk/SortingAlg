@@ -1,7 +1,7 @@
 #ifndef MERGESORT_H
 #define MERGESORT_H
 
-#include "..\Lab1\Sort.h"
+#include "Sort.h"
 
 template<class T>
 ///Class implements sorting by Merge sort.

@@ -143,6 +143,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MenuInt.cpp" />
+    <ClCompile Include="MenuString.cpp" />
     <ClCompile Include="lab1_main.cpp" />
     <ClCompile Include="lab1_test.cpp" />
   </ItemGroup>
@@ -151,7 +153,9 @@
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="doctest.h" />
     <ClInclude Include="InsertionSort.h" />
-    <ClInclude Include="Interface.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="MenuInt.h" />
+    <ClInclude Include="MenuString.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="MergeSort.h" />

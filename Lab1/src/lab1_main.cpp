@@ -1,6 +1,6 @@
 #include "MenuInt.h"
 #include "MenuString.h"
-#include "..\Lab1\doctest.h"
+#include "doctest.h"
 
 
 //In order to turn off the text mode,

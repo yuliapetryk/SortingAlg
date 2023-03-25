@@ -2,7 +2,7 @@
 #define QUICKSORT_H
 
 #include <algorithm>
-#include "..\Lab1\Sort.h"
+#include "Sort.h"
 
 template<class T>
 ///Class implements sorting by Quick sort.

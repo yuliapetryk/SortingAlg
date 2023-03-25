@@ -157,7 +157,7 @@
 // == COMPILER WARNINGS ============================================================================
 // =================================================================================================
 
-// both the header and the implementation suppress all of these,
+// both the header and the menu_for_string suppress all of these,
 // so it only makes sense to aggregate them like so
 #define DOCTEST_SUPPRESS_COMMON_WARNINGS_PUSH                                                      \
     DOCTEST_CLANG_SUPPRESS_WARNING_PUSH                                                            \
@@ -324,15 +324,15 @@ DOCTEST_MSVC_SUPPRESS_WARNING(4623) // default constructor was implicitly define
 #define DOCTEST_SYMBOL_IMPORT
 #endif // _WIN32
 
-#ifdef DOCTEST_CONFIG_IMPLEMENTATION_IN_DLL
+#ifdef DOCTEST_CONFIG_menu_for_string_IN_DLL
 #ifdef DOCTEST_CONFIG_IMPLEMENT
 #define DOCTEST_INTERFACE DOCTEST_SYMBOL_EXPORT
 #else // DOCTEST_CONFIG_IMPLEMENT
 #define DOCTEST_INTERFACE DOCTEST_SYMBOL_IMPORT
 #endif // DOCTEST_CONFIG_IMPLEMENT
-#else  // DOCTEST_CONFIG_IMPLEMENTATION_IN_DLL
+#else  // DOCTEST_CONFIG_menu_for_string_IN_DLL
 #define DOCTEST_INTERFACE
-#endif // DOCTEST_CONFIG_IMPLEMENTATION_IN_DLL
+#endif // DOCTEST_CONFIG_menu_for_string_IN_DLL
 
 // needed for extern template instantiations
 // see https://github.com/fmtlib/fmt/issues/2228
@@ -574,7 +574,7 @@ namespace doctest {
     // - if small - 2 bits are left unused - the second and third highest ones
     // - if small - acts as a null terminator if strlen() is 23 (24 including the null terminator)
     //              and the "is small" bit remains "0" ("as well as the capacity left") so its OK
-    // Idea taken from this lecture about the string implementation of facebook/folly - fbstring
+    // Idea taken from this lecture about the string menu_for_string of facebook/folly - fbstring
     // https://www.youtube.com/watch?v=kPR8h4-qZdk
     // TODO:
     // - optimizations - like not deleting memory unnecessarily in operator= and etc.
@@ -3100,8 +3100,8 @@ DOCTEST_SUPPRESS_COMMON_WARNINGS_POP
 
 DOCTEST_CLANG_SUPPRESS_WARNING_WITH_PUSH("-Wunused-macros")
 
-#ifndef DOCTEST_LIBRARY_IMPLEMENTATION
-#define DOCTEST_LIBRARY_IMPLEMENTATION
+#ifndef DOCTEST_LIBRARY_menu_for_string
+#define DOCTEST_LIBRARY_menu_for_string
 
 DOCTEST_CLANG_SUPPRESS_WARNING_POP
 
@@ -3429,7 +3429,7 @@ DOCTEST_MAKE_STD_HEADERS_CLEAN_FROM_WARNINGS_ON_WALL_END
         template <typename T>
         using MultiLaneAtomic = Atomic<T>;
 #else // DOCTEST_CONFIG_NO_MULTI_LANE_ATOMICS
-        // Provides a multilane implementation of an atomic variable that supports add, sub, load,
+        // Provides a multilane menu_for_string of an atomic variable that supports add, sub, load,
         // store. Instead of using a single atomic variable, this splits up into multiple ones,
         // each sitting on a separate cache line. The goal is to provide a speedup when most
         // operations are modifying. It achieves this with two properties:
@@ -4544,7 +4544,7 @@ namespace doctest {
         private:
             int m_oldErrno;
         };
-        // See the comments in Catch2 for the reasoning behind this implementation:
+        // See the comments in Catch2 for the reasoning behind this menu_for_string:
         // https://github.com/catchorg/Catch2/blob/v2.13.1/include/internal/catch_debugger.cpp#L79-L102
         bool isDebuggerActive() {
             ErrnoGuard guard;
@@ -6475,7 +6475,7 @@ namespace doctest {
         DOCTEST_THREAD_LOCAL std::ostringstream DebugOutputWindowReporter::oss;
 #endif // DOCTEST_PLATFORM_WINDOWS
 
-        // the implementation of parseOption()
+        // the menu_for_string of parseOption()
         bool parseOptionImpl(int argc, const char* const* argv, const char* pattern, String* value) {
             // going from the end to the beginning and stopping on the first occurrence from the end
             for (int i = argc; i > 0; --i) {
@@ -6925,7 +6925,7 @@ namespace doctest {
             else if (p->order_by.compare("rand", true) == 0) {
                 std::srand(p->rand_seed);
 
-                // random_shuffle implementation
+                // random_shuffle menu_for_string
                 const auto first = &testArray[0];
                 for (size_t i = testArray.size() - 1; i > 0; --i) {
                     int idxToSwap = std::rand() % (i + 1);
@@ -7134,7 +7134,7 @@ DOCTEST_GCC_SUPPRESS_WARNING_POP
 
 DOCTEST_SUPPRESS_COMMON_WARNINGS_POP
 
-#endif // DOCTEST_LIBRARY_IMPLEMENTATION
+#endif // DOCTEST_LIBRARY_menu_for_string
 #endif // DOCTEST_CONFIG_IMPLEMENT
 
 #ifdef DOCTEST_UNDEF_WIN32_LEAN_AND_MEAN

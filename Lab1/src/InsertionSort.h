@@ -1,7 +1,7 @@
 #ifndef INSERTIONSORT_H
 #define INSERTIONSORT_H
 
-#include "..\Lab1\Sort.h"
+#include "Sort.h"
 
 
 template<class T>

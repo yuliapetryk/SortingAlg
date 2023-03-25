@@ -1,7 +1,7 @@
 #ifndef BUBBLESORT_H
 #define BUBBLESORT_H
 
-#include "..\Lab1\Sort.h"
+#include "Sort.h"
 
 template<class T>
 ///Class implements sorting by Bubble sort.

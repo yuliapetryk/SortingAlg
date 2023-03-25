@@ -2,7 +2,7 @@
 #define ARRAYLIST_H
 
 
-#include "..\Lab1\List.h"
+#include "List.h"
 
 template<class T>
 ///The class implements work with a array list
